@@ -1,0 +1,3 @@
+# minidots
+
+minimal sufficient dotfiles

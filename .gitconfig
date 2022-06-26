@@ -1,0 +1,19 @@
+[user]
+  email = me@coord-e.com
+  name = coord_e
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  logtree = "log --graph --oneline --decorate=full"
+  ls-untracked = "ls-files --other --exclude-standard"
+[merge]
+  conflictStyle = diff3
+  ff = false
+[pull]
+  ff = only
+[push]
+  default = simple
+[diff]
+  algorithm = histogram
