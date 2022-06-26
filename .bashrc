@@ -1,3 +1,5 @@
+[[ $- != *i* ]] && return
+
 function sourceif() {
   [ -e $1 ] && source $@ || true
 }
@@ -43,7 +45,7 @@ function prompt {
   else
     start_color=$COLOR_RED
   fi
-  PS1="\n$COLOR_BLUE\w\n$start_color❯$COLOR_RESET "
+  PS1="\n$COLOR_BLUE\u@\h \w\n$start_color❯$COLOR_RESET "
 }
 
 PROMPT_COMMAND='prompt'
