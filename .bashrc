@@ -17,6 +17,10 @@ function recd() {
   cd "$PWD"
 }
 
+evalif tmux-go "$(tmux-go completion)"
+evalif direnv "$(direnv hook bash)"
+sourceif "$HOME/.opam/opam-init/init.sh"
+
 alias l='ls --color=auto'
 alias la='l -la'
 alias unansi='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g"'
