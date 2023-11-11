@@ -17,11 +17,6 @@ function recd() {
   cd "$PWD"
 }
 
-export PATH=$PATH:$HOME/.local/bin
-evalif nvim 'export VISUAL=nvim'
-evalif vim 'export VISUAL=vim'
-export EDITOR=$VISUAL
-
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias mkdir='mkdir -p'
