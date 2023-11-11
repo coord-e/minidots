@@ -17,11 +17,8 @@ function recd() {
   cd "$PWD"
 }
 
-alias ls='ls --color=auto'
-alias la='ls -la'
-alias mkdir='mkdir -p'
-alias df='df -h'
-alias du='du -ch'
+alias l='ls --color=auto'
+alias la='l -la'
 alias unansi='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g"'
 
 bind '"jj": vi-movement-mode'
