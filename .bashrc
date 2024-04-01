@@ -39,6 +39,7 @@ readonly COLOR_RED="\[$(tput setaf 1)\]"
 readonly COLOR_GREEN="\[$(tput setaf 2)\]"
 readonly COLOR_BLUE="\[$(tput setaf 4)\]"
 readonly COLOR_PURPLE="\[$(tput setaf 5)\]"
+readonly COLOR_GRAY="\[$(tput setaf 8)\]"
 readonly COLOR_RESET="\[$(tput sgr0)\]"
 
 function prompt {
@@ -49,7 +50,7 @@ function prompt {
   else
     start_color=$COLOR_RED
   fi
-  PS1="\n$COLOR_BLUE\u@\h \w\n$start_color❯$COLOR_RESET "
+  PS1="$COLOR_GRAY\D{%FT%T%z}\n$COLOR_BLUE\u@\h \w\n$start_color\$$COLOR_RESET "
 }
 
 PROMPT_COMMAND='prompt'
