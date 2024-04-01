@@ -17,6 +17,14 @@ function recd() {
   cd "$PWD"
 }
 
+function t() {
+  tmp=$(mktemp -d)
+  pushd "$tmp" > /dev/null
+  $SHELL -i
+  popd > /dev/null
+  rm -rf "$tmp"
+}
+
 evalif tmux-go "$(tmux-go completion)"
 evalif direnv "$(direnv hook bash)"
 sourceif "$HOME/.opam/opam-init/init.sh"
