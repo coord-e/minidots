@@ -5,7 +5,10 @@ function sourceif() {
 }
 
 function evalif() {
-  type $1 >/dev/null 2>&1 && eval "$2" || true
+  if type $1 >/dev/null 2>&1; then
+    script=$("$@")
+    eval "$script"
+  fi
 }
 
 function mkcd() {
@@ -25,8 +28,8 @@ function t() {
   rm -rf "$tmp"
 }
 
-evalif tmux-go "$(tmux-go completion)"
-evalif direnv "$(direnv hook bash)"
+evalif tmux-go completion
+evalif direnv hook bash
 sourceif "$HOME/.opam/opam-init/init.sh"
 
 alias l='ls --color=auto'
