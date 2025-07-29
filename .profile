@@ -15,6 +15,14 @@ if [ -d "$HOME/.volta" ]; then
   PATH=$VOLTA_HOME/bin:$PATH
 fi
 
+if [ -d "$HOME/.rbenv" ]; then
+  PATH=$PATH:$HOME/.rbenv/bin
+fi
+
+if [ -d "$HOME/.local/share/fnm" ]; then
+  PATH=$PATH:$HOME/.local/share/fnm
+fi
+
 if [ -d "$HOME/.local/bin" ]; then
   PATH=$PATH:$HOME/.local/bin
 fi

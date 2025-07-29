@@ -31,6 +31,8 @@ function t() {
 evalif tmux-go completion
 evalif direnv hook bash
 sourceif "$HOME/.opam/opam-init/init.sh"
+evalif rbenv init - --no-rehash bash
+evalif fnm env --use-on-cd --version-file-strategy=recursive --shell=bash
 
 alias l='ls --color=auto'
 alias la='l -la'
