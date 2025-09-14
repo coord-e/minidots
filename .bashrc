@@ -58,4 +58,4 @@ function prompt {
   PS1="$COLOR_GRAY\D{%FT%T%z}\n$COLOR_BLUE\u@\h \w\n$start_color\$$COLOR_RESET "
 }
 
-PROMPT_COMMAND='prompt'
+PROMPT_COMMAND="$PROMPT_COMMAND; prompt"
